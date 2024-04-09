@@ -676,6 +676,24 @@ h3.my-profession span
     width: 100%;
     display: block;
 }
+
+/*   Blogs  */
+.blogs .container
+{
+    padding-bottom: 50px;
+}
+.blogs .blogs-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.blogs .blogs-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
 /*   CONTACT   */
 .contact-title
 {
