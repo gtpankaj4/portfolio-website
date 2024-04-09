@@ -653,10 +653,12 @@ h3.my-profession span
     max-width: 100%;
     margin-bottom: 40px;
 }
-.portfolio .portfolio-heading h2
+h2.design span
 {
-    color: var(--text-black-900);
-    font-weight: 500;
+    font-family: 'Clicker Script' , cursive;
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--skin-color);
 }
 .portfolio .portfolio-item
 {
@@ -688,10 +690,12 @@ h3.my-profession span
     max-width: 100%;
     margin-bottom: 40px;
 }
-.blogs .blogs-heading h2
+h2.design-a span
 {
-    color: var(--text-black-900);
-    font-weight: 500;
+    font-family: 'Clicker Script' , cursive;
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--skin-color);
 }
 
 /*   CONTACT   */
