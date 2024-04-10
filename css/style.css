@@ -20,6 +20,9 @@ body.dark {
   text-decoration: none;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   line-height: 1.5;
   font-size: 16px;
@@ -556,7 +559,7 @@ h3.my-profession span {
 .portfolio .portfolio-heading {
   flex: 0 0 100%;
   max-width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 1px;
 }
 h2.design span {
   font-family: "Clicker Script", cursive;
@@ -588,7 +591,7 @@ h2.design span {
 .blogs .blogs-heading {
   flex: 0 0 100%;
   max-width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 1px;
 }
 h2.design-a span {
   font-family: "Clicker Script", cursive;
@@ -600,20 +603,12 @@ h2.design-a span {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-}
-#blog {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0px;
-  background-color: #f9f8ff;
+  margin-top: 1px;
 }
 .blog-box-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 50px;
+  margin-top: 1px;
   max-width: 1050px;
   width: 90%;
 }
