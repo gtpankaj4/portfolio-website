@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" type="my-icon" href="logo.png" />
+    <link rel="shortcut icon" type="my-icon" href="../profile-logo.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Threats of AI and Neuralink - Should We Be Worried?</title>
@@ -16,7 +16,8 @@
       @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&family=Smooch&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
       body {
         font-family: "Comfortaa", sans-serif;
         margin: 0;
@@ -89,10 +90,16 @@
       }
       .publish {
         font-size: 10px;
+        font-family: "Lora";
+      }
+      .data {
+        font-family: "Lato";
+        color: #3c3c3c;
       }
       article h2 {
         text-align: center;
         color: #5bbcff;
+        font-family: "Poppins";
       }
       article:hover {
         transform: translateY(-5px);
@@ -178,6 +185,7 @@
         font-family: "Poppins";
         font-weight: 600;
         padding-left: 18px;
+        color: #4d4d4d;
       }
 
       .footer-image {
@@ -205,11 +213,12 @@
   <body>
     <header>
       <div style="position: absolute; top: 20px; left: 20px">
-        <img
-          src="icon.gif"
-          alt="Logo"
-          style="width: 50px; height: 50px; border-radius: 50%"
-        />
+        <a href="../index.html"
+          ><img
+            src="../icon.gif"
+            alt="Logo"
+            style="width: 50px; height: 50px; border-radius: 50%"
+        /></a>
       </div>
       <div>
         <h1><i class="fa-solid fa-blog"></i> Blogs Section</h1>
@@ -231,7 +240,7 @@
           <p class="publish">
             Published on April 10<sup>th</sup>, 2024 by Pankaj Bhatta
           </p>
-          <p>
+          <p class="data">
             Man, AI has been around since like forever, like since the 1950s!
             And now, it's everywhere - in healthcare, finance, you name it. But
             hey, it's not all rainbows and butterflies. There are some serious
@@ -296,7 +305,11 @@
         <p>© 2024 PANKAJ BHATTA. All rights reserved.</p>
       </div>
       <div>
-        <img class="footer-image" src="logo.png" alt="Image Description" />
+        <img
+          class="footer-image"
+          src="../profile-logo.png"
+          alt="Image Description"
+        />
       </div>
     </footer>
   </body>
