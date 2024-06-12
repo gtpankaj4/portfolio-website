@@ -876,3 +876,9 @@ h2.design-a span {
     max-width: 100%;
   }
 }
+.chatbot {
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  padding: 15px;
+}
