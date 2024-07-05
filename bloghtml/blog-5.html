@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="my-icon" href="../profile-logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poem | On The Food I Rely</title>
+    <!-- CSS LIBRARIES-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&family=Smooch&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+      body {
+        font-family: "Comfortaa", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      header {
+        background-color: #fefded;
+        color: #f4a261;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+      }
+
+      header h1 {
+        margin: 0;
+        margin-left: 55px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+      }
+
+      header p {
+        margin-top: 5px;
+        font-size: 18px;
+      }
+
+      nav {
+        background-color: #a1c398;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        background-color: #fa7070;
+      }
+
+      .container {
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      main {
+        flex-basis: 100%;
+        margin-bottom: 60px; /* Adjust this value according to your footer height */
+      }
+      article {
+        padding: 20px;
+        border: 1px solid #264653;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-align: center; /* Center text within article */
+
+      }
+      .publish {
+        font-size: 10px;
+        font-family: "Lora";
+      }
+      .data {
+        font-family: "Lato";
+        color: #3c3c3c;
+        justify-content: center;
+      }
+      article h1 {
+        text-align: center;
+        color: #ff746c;
+        font-family: "Poppins";
+      }
+      article h2 {
+        text-align: center;
+        color: #5bbcff;
+        font-family: "Poppins";
+      }
+      article:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .bounce {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        /* Adding a subtle shadow */
+      }
+
+      .bounce p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        transform: translateX(50%);
+        animation: bouncing-text 10s ease-in-out infinite alternate;
+      }
+
+      @keyframes bouncing-text {
+        0% {
+          transform: translateX(50%);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      aside {
+        flex-basis: 100%;
+        background-color: #c6ebc5;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 60px;
+      }
+      aside aside:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      aside li {
+        padding-bottom: 10px;
+      }
+      aside li a:link,
+      a:visited {
+        border-radius: 12px;
+        background-color: #fa7070;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      aside li a:hover,
+      a:active {
+        background-color: #5bbcff;
+      }
+      footer {
+        background-color: #fefded;
+        color: black;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      footer p {
+        margin: 0;
+        font-family: "Poppins";
+        font-weight: 600;
+        padding-left: 18px;
+        color: #4d4d4d;
+      }
+
+      .footer-image {
+        max-width: 50px; /* Adjust size as needed */
+        height: auto;
+        padding-right: 10px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .container {
+          flex-wrap: nowrap;
+        }
+
+        main {
+          flex-basis: 70%;
+          margin-right: 20px;
+        }
+
+        aside {
+          flex-basis: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--../ use this to go one folder back // ../../ use this to go two folder back-->
+    <header>
+      <div style="position: absolute; top: 20px; left: 20px">
+        <a href="../index.html"><img
+          src="../icon.gif"
+          alt="Logo"
+          style="width: 50px; height: 50px; border-radius: 50%"
+        /></a>
+      </div>
+      <div>
+        <h1><i class="fa-solid fa-blog"></i> Blogs Section</h1>
+        <p>User-friendly, Informative, Innovative, Engaging Blogs</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="https://www.pankaj-bhatta.com.np/"><span>Home</span></a>
+      <a href="blog-1.html"><span>AI</span></a>
+      <a href="blog-2.html"><span>National</span></a>
+      <a href="#"><span>Programming</span></a>
+      <a href="#"><span>Graphics<span></a>
+    </nav>
+    <div class="container">
+      <main>
+        <article>
+          <h1>On The Food I Rely</h1>
+          <p class="publish">
+            Published on July 5<sup>th</sup>, 2024 by Pankaj Bhatta
+          </p>
+          <p class="data">
+            A Bird, me, fly no fear <br>
+            Rules? What is that I hear <br>
+            Far from the evils I fly <br>
+            On the food is what I rely<br><br>
+
+            Traveling, I see the world <br>
+            Not know what's money and gold <br>
+            Far from the cruelty I fly <br>
+            On the food is what I rely <br><br>
+
+            My aim is to live and feed <br>
+            Not destroy nature like human did <br>
+            Far from the destruction I fly <br>
+            On the food is what I rely <br><br>
+
+            Live until I satisfied <br>
+            Poor humans, life so mystified <br>
+            Far from the sadness I fly <br>
+            On the food is what I rely <br><br>
+
+            No anxiety No depression No Tension <br>
+            Home, money & jewelery they mention <br>
+            Far from the class division I fly <br>
+            On the food is what I rely <br><br>
+          </p>
+          <div class="bounce">
+            <p>Thankyou so much !!</p>
+          </div>
+        </article>
+      </main>
+
+      <aside>
+        <h2>Recent Posts</h2>
+        <ul>
+          <li>
+            <a href="blog-1.html"><span>AI</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Smartphone</span></a>
+          </li>
+          <li>
+            <a href="blog-2.html"><span>National</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Programming</span></a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    
+    <footer>
+      <div>
+        <p>©2024 PANKAJ BHATTA. All rights reserved.</p>
+      </div>
+      <div>
+        <img class="footer-image" src="../profile-logo.png" alt="Image Description" />
+      </div>
+    </footer>
+  </body>
+</html>
