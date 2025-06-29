@@ -388,3 +388,75 @@ On the food is what I rely <br><br>
         return div.textContent || div.innerText || '';
     }
 });
+
+// Graphic Designs Lightbox
+
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('design-lightbox');
+    const lightboxImg = document.getElementById('design-lightbox-img');
+    const lightboxClose = document.getElementById('design-lightbox-close');
+
+    document.querySelectorAll('.masonry-card img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function() {
+            lightboxImg.src = this.src;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    lightboxClose.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+    });
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+        }
+    });
+});
+
+// Copy to clipboard functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const contactItem = this.closest('.contact-info-item');
+            const valueElement = contactItem.querySelector('.contact-info-value');
+            const textToCopy = valueElement.textContent.trim();
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Show success feedback
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check"></i>';
+                this.style.color = '#28a745';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                // Show success feedback
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check"></i>';
+                this.style.color = '#28a745';
+                
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.style.color = '';
+                }, 2000);
+            });
+        });
+    });
+});
