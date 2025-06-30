@@ -7,9 +7,9 @@
   --text-black-700: #504e70;
 }
 body.dark {
-  --bg-black-900: #242a33;
-  --bg-black-100: #242a33;
-  --bg-black-50: #2f3742;
+  --bg-black-900: #121212;
+  --bg-black-100: #121212;
+  --bg-black-50: #232323;
   --text-black-900: #ffffff;
   --text-black-700: #e9e9e9;
 }
@@ -50,6 +50,10 @@ ul {
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.3s ease;
+}
+body.dark .section,
+[data-theme="dark"] .section {
+  background: linear-gradient(135deg, #121212 0%, #18181f 100%);
 }
 .section.back-section {
   z-index: 1;
@@ -1205,6 +1209,14 @@ body.dark .masonry-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
+body.dark .contact-card,
+[data-theme="dark"] .contact-card {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+body.dark .contact-card:hover,
+[data-theme="dark"] .contact-card:hover {
+  box-shadow: 0 4px 24px rgba(255,255,255,0.13);
+}
 .card-accent {
   width: 56px;
   height: 56px;
@@ -1392,4 +1404,13 @@ body.dark .masonry-card:hover {
   .contact-info-item {
     margin-bottom: 1.2rem;
   }
+}
+
+.contact-card h3 {
+  color: var(--text-black-900);
+  font-weight: 700;
+  font-size: 1.35em;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
 }
